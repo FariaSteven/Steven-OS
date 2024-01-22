@@ -7,13 +7,13 @@ import Medium from "../assets/Medium Icon.svg";
 import Gmail from "../assets/Gmail Icon.svg";
 import bin from "../assets/Bin.svg";
 import Macintosh from "../assets/Macintosh-happy.svg";
-import FileText from "../assets/file-text.svg";
+import FileText from "../assets/File-text.svg";
 import File from "../assets/File-vector.svg";
 import Library from "../assets/Library.svg";
 import Cow from "../assets/Cow.svg";
 
 const apps = {
-  leftApps: [
+  leftApps: [ 
     {
       icon: Macintosh,
       text: "Me",
