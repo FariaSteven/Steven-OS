@@ -1,0 +1,20 @@
+<svg width="268" height="188" viewBox="0 0 268 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_47_802)">
+<rect width="268" height="188" fill="white"/>
+<mask id="path-1-inside-1_47_802" fill="white">
+<rect width="268" height="188" rx="1"/>
+</mask>
+<rect width="268" height="188" rx="1" fill="white" stroke="#4F4F4F" stroke-width="12" mask="url(#path-1-inside-1_47_802)"/>
+<ellipse cx="201" cy="62.6666" rx="11.1667" ry="10.4444" fill="#4F4F4F"/>
+<path d="M134 83.5557L146 182" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round"/>
+<path d="M111.667 83.5557L134 5" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round"/>
+<path d="M111.667 83.5557H134" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="67" cy="62.6666" rx="11.1667" ry="10.4444" fill="#4F4F4F"/>
+<path d="M56 133L68.3666 137.176C85.6656 143.016 103.827 145.891 122.085 145.678L146.692 145.39C160.436 145.229 174.103 143.32 187.364 139.709L212 133" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_47_802">
+<rect width="268" height="188" fill="white"/>
+</clipPath>
+</defs>
+</svg>
