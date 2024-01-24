@@ -1,18 +1,42 @@
-import { VStack } from '@chakra-ui/react';
+import { Text, VStack } from '@chakra-ui/react';
 import AppsContainer from './AppsContainer';
 import Header from './Header';
 
 import CursorDefault from '../assets/default.svg';
+import OpenedAppsContainer from './OpenedAppsContainer';
+import Projects from './Projects';
+import { useState } from 'react';
+import Me from './Me';
 
 const Main = () => {
+  const [openedApp, setOpenedApp] = useState("");
+
+  const openApp = () => {
+    switch (openedApp) {
+      case 'Projects':
+        return <Projects />;
+      case 'Me':
+        return <Me />;
+      case 'Projects':
+        return <Projects />;
+      default:
+        return '';
+    }
+  }
+
   return (
-    <VStack 
-    h="100vh" 
-    bg="#BDBDBD" 
-    cursor={`url(${CursorDefault}), default;`}
+    <VStack
+      h="100vh"
+      bg="#BDBDBD"
+      cursor={`url(${CursorDefault}), default;`}
+      fontFamily="ChicagoFLFRegular"
+      color="#4F4F4F"
     >
-      <Header/>
-      <AppsContainer/>
+      <Header />
+      <AppsContainer setOpenedApp={setOpenedApp}/>
+      {openedApp !== "" && <OpenedAppsContainer title={openedApp} setOpenedApp={setOpenedApp}>
+        {openApp()}
+      </OpenedAppsContainer>}
     </VStack>
   )
 }

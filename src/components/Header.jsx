@@ -7,7 +7,6 @@ const Header = () => {
     <HStack
       w="100%"
       bg="#FFF"
-      fontFamily="ChicagoFLFRegular"
       color="#4F4F4F" 
       p="0px 10px"
       fontSize="12px"

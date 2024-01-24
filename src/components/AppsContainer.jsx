@@ -1,4 +1,4 @@
-import { HStack, VStack, Text } from '@chakra-ui/react';
+import { HStack, VStack, Text, Link } from '@chakra-ui/react';
 
 import Linkedin from "../assets/LinkedIn.svg";
 import Github from "../assets/GitHub Icon.svg";
@@ -14,7 +14,7 @@ import Cow from "../assets/Cow.svg";
 import CursorPointer from '../assets/pointer.svg';
 
 const apps = {
-  leftApps: [ 
+  leftApps: [
     {
       icon: Macintosh,
       text: "Me",
@@ -40,56 +40,58 @@ const apps = {
     {
       icon: Linkedin,
       text: "LinkedIn",
+      link: "https://www.linkedin.com/in/steven-faria-12691317a/"
     },
     {
       icon: Github,
       text: "GitHub",
+      link: "https://github.com/FariaSteven"
     },
     {
       icon: Medium,
       text: "Medium",
+      link: "https://medium.com/@stevenfaria.gusmao"
     },
-    {
-      icon: Gmail,
-      text: "Gmail",
-    },
+    // {
+    //   icon: Gmail,
+    //   text: "Gmail",
+    // },
   ]
 }
 
-const AppsContainer = () => {
+const AppsContainer = ({ setOpenedApp }) => {
   return (
     <HStack
-        fontFamily="ChicagoFLFRegular"
-        color="#4F4F4F"
-        justifyContent="space-between"
-        alignItems="flex-start"
-        p="20px 10px"
-        h="100%"
-        w="100%"
-      >
-        <VStack>
-          {apps.leftApps.map((item) => (
-            <VStack cursor={`url(${CursorPointer}), pointer;`}>
+      color="#4F4F4F"
+      justifyContent="space-between"
+      alignItems="flex-start"
+      p="20px 10px"
+      h="100%"
+      w="100%"
+    >
+      <VStack>
+        {apps.leftApps.map((item, i) => (
+          <VStack key={i} cursor={`url(${CursorPointer}), pointer;`} onClick={() => setOpenedApp(item.text)}>
+            <img src={item.icon} alt={item.text} />
+            <Text>{item.text}</Text>
+          </VStack>
+        ))}
+      </VStack>
+      <VStack h="100%" justifyContent="space-between">
+        <VStack cursor={`url(${CursorPointer}), pointer;`}>
+          {apps.rightApps.map((item, i) => (
+            <Link key={i} href={item.link} target='_blank' cursor={`url(${CursorPointer}), pointer;`} textAlign="center">
               <img src={item.icon} alt={item.text} />
               <Text>{item.text}</Text>
-            </VStack>
+            </Link>
           ))}
         </VStack>
-        <VStack h="100%" justifyContent="space-between">
-          <VStack cursor={`url(${CursorPointer}), pointer;`}>
-            {apps.rightApps.map((item) => (
-              <VStack>
-                <img src={item.icon} alt={item.text} />
-                <Text>{item.text}</Text>
-              </VStack>
-            ))}
-          </VStack>
-          <VStack cursor={`url(${CursorPointer}), pointer;`}>
-            <img src={bin} alt="Trash" />
-            <Text>Trash</Text>
-          </VStack>
+        <VStack cursor={`url(${CursorPointer}), pointer;`}>
+          <img src={bin} alt="Trash" />
+          <Text>Trash</Text>
         </VStack>
-      </HStack>
+      </VStack>
+    </HStack>
   )
 }
 
