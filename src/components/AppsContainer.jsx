@@ -71,22 +71,31 @@ const AppsContainer = ({ setOpenedApp }) => {
     >
       <VStack>
         {apps.leftApps.map((item, i) => (
-          <VStack key={i} cursor={`url(${CursorPointer}), pointer;`} onClick={() => setOpenedApp(item.text)}>
+          <VStack
+            key={i}
+            cursor={`url(${CursorPointer}), auto;`} 
+            onClick={() => setOpenedApp(item.text)}>
             <img src={item.icon} alt={item.text} />
             <Text>{item.text}</Text>
           </VStack>
         ))}
       </VStack>
       <VStack h="100%" justifyContent="space-between">
-        <VStack cursor={`url(${CursorPointer}), pointer;`}>
+        <VStack
+        cursor={`url(${CursorPointer}), auto;`}
+        >
           {apps.rightApps.map((item, i) => (
-            <Link key={i} href={item.link} target='_blank' cursor={`url(${CursorPointer}), pointer;`} textAlign="center">
+            <Link key={i} href={item.link} target='_blank' 
+            cursor={`url(${CursorPointer}), auto;`} 
+            textAlign="center">
               <img src={item.icon} alt={item.text} />
               <Text>{item.text}</Text>
             </Link>
           ))}
         </VStack>
-        <VStack cursor={`url(${CursorPointer}), pointer;`}>
+        <VStack
+        cursor={`url(${CursorPointer}), auto;`}
+        >
           <img src={bin} alt="Trash" />
           <Text>Trash</Text>
         </VStack>
