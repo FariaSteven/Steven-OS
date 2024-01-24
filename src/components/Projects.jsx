@@ -1,6 +1,5 @@
 import { HStack, Link, Text, VStack } from '@chakra-ui/react';
 import CursorPointer from '../assets/pointer.svg';
-import '../App.css';
 
 const projectData = [
   {
@@ -33,10 +32,7 @@ const Projects = () => {
           <Link
             href={item.link}
             target='_blank'
-            sx={{
-              cursor: 'var(--cursorPointer)'
-            }}
-            cursor={'var(--cursorPointer)'}
+            cursor={`url(${CursorPointer}), auto;`}
             w="100%"
             display="grid"
             gridTemplateColumns={["0.5fr 1fr 1fr 1fr"]}
