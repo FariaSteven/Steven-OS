@@ -25,7 +25,7 @@ const Curriculum = () => {
     return (
         <VStack p="5px">
             <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-                <Page width={windowWidth <= 425 && "360"} pageNumber={pageNumber} />
+                <Page width={windowWidth <= 500 && "360"} pageNumber={pageNumber} />
             </Document>
             <HStack w="100%" justifyContent="space-between">
                 <Text>
