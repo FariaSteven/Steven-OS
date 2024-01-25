@@ -22,7 +22,7 @@ const OpenedAppsContainer = ({ children, title, setOpenedApp }) => {
           <Text fontSize="18px">{title}</Text>
           <div></div>
         </HStack>
-        <VStack w="100%">
+        <VStack w="100%" h="100%">
           {children}
         </VStack>
       </VStack>
