@@ -2,7 +2,7 @@ import { HStack, VStack, Text, Link } from '@chakra-ui/react';
 import Linkedin from "../assets/LinkedIn.svg";
 import Github from "../assets/GitHub Icon.svg";
 import Medium from "../assets/Medium Icon.svg";
-import Gmail from "../assets/Gmail Icon.svg";
+// import Gmail from "../assets/Gmail Icon.svg";
 import bin from "../assets/Bin.svg";
 import Macintosh from "../assets/Macintosh-happy.svg";
 import FileText from "../assets/File-text.svg";

@@ -1,4 +1,4 @@
-import { Divider, HStack, Link, Select, Text, VStack } from '@chakra-ui/react';
+import { Divider, HStack, Text, VStack } from '@chakra-ui/react';
 
 import save from "../assets/Save.svg";
 import boldBtn from "../assets/bold-btn.svg";

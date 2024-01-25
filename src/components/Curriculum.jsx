@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Document, Page, pdfjs } from 'react-pdf';
-import { Divider, HStack, Link, Text, VStack } from '@chakra-ui/react';
+import { HStack, Link, Text, VStack } from '@chakra-ui/react';
 
 import pdf from "../assets/CV_Steven_Faria_Gusmão.pdf";
 import save from "../assets/Save.svg";
