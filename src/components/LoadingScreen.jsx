@@ -21,7 +21,7 @@ const LoadingScreen = () => {
     const animationRun = `${animation} infinite 5s`;
 
     return (
-        <VStack h="100vh" justifyContent="center">
+        <VStack h="100vh" justifyContent="center" m="0px 15px">
             <VStack
                 border="4px solid #4F4F4F"
                 bg="#FFF"
@@ -60,7 +60,7 @@ const LoadingScreen = () => {
                         <div style={squareStyles}>I</div>
                     </Text>
                 </VStack>
-                <Text fontSize="12px">TM and © Steven Corporation 2001 - 2024. All rights reserved.</Text>
+                <Text fontSize="12px" textAlign="center">TM and © Steven Corporation 2001 - 2024. All rights reserved.</Text>
             </VStack>
         </VStack>
     )
