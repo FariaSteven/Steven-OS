@@ -5,12 +5,14 @@ import Header from './Header';
 import CursorDefault from '../assets/default.svg';
 import OpenedAppsContainer from './OpenedAppsContainer';
 import Projects from './Projects';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Me from './Me';
 import Curriculum from './Curriculum';
+import LoadingScreen from './LoadingScreen';
 
 const Main = () => {
   const [openedApp, setOpenedApp] = useState("");
+  const [done, setDone] = useState(false);
 
   const openApp = () => {
     switch (openedApp) {
@@ -25,6 +27,10 @@ const Main = () => {
     }
   }
 
+  setTimeout(() => {
+    setDone(true)
+  }, 5000);
+  
   return (
     <VStack
       h="100vh"
@@ -34,10 +40,15 @@ const Main = () => {
       color="#4F4F4F"
     >
       <Header />
-      <AppsContainer setOpenedApp={setOpenedApp}/>
-      {openedApp !== "" && <OpenedAppsContainer title={openedApp} setOpenedApp={setOpenedApp}>
-        {openApp()}
-      </OpenedAppsContainer>}
+      {
+        done === false ? <LoadingScreen/> :
+        <>
+          <AppsContainer setOpenedApp={setOpenedApp} />
+          {openedApp !== "" && <OpenedAppsContainer title={openedApp} setOpenedApp={setOpenedApp}>
+            {openApp()}
+          </OpenedAppsContainer>}
+        </>
+      }
     </VStack>
   )
 }
