@@ -1,5 +1,4 @@
 import { Divider, HStack, Link, Select, Text, VStack } from '@chakra-ui/react';
-import { IoCaretDownSharp } from "react-icons/io5";
 
 import save from "../assets/Save.svg";
 import boldBtn from "../assets/bold-btn.svg";
