@@ -1,5 +1,4 @@
 import { HStack, VStack, Text, Link } from '@chakra-ui/react';
-
 import Linkedin from "../assets/LinkedIn.svg";
 import Github from "../assets/GitHub Icon.svg";
 import Medium from "../assets/Medium Icon.svg";
@@ -74,7 +73,10 @@ const AppsContainer = ({ setOpenedApp }) => {
           <VStack
             key={i}
             cursor={`url(${CursorPointer}), auto;`} 
-            onClick={() => setOpenedApp(item.text)}>
+            onClick={() => {
+              setOpenedApp(item.text)
+
+              }}>
             <img src={item.icon} alt={item.text} />
             <Text>{item.text}</Text>
           </VStack>

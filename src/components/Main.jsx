@@ -7,6 +7,7 @@ import OpenedAppsContainer from './OpenedAppsContainer';
 import Projects from './Projects';
 import { useState } from 'react';
 import Me from './Me';
+import Curriculum from './Curriculum';
 
 const Main = () => {
   const [openedApp, setOpenedApp] = useState("");
@@ -17,8 +18,8 @@ const Main = () => {
         return <Projects />;
       case 'Me':
         return <Me />;
-      case 'Projects':
-        return <Projects />;
+      case 'Curriculum':
+        return <Curriculum />;
       default:
         return '';
     }
