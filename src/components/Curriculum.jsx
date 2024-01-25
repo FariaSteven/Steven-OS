@@ -11,6 +11,8 @@ const Curriculum = () => {
     const [numPages, setNumPages] = useState();
     const [pageNumber, setPageNumber] = useState(1);
 
+    const windowWidth = window.innerWidth;
+
     pdfjs.GlobalWorkerOptions.workerSrc = new URL(
         'pdfjs-dist/build/pdf.worker.min.js',
         import.meta.url,
@@ -23,7 +25,7 @@ const Curriculum = () => {
     return (
         <VStack p="5px">
             <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-                <Page pageNumber={pageNumber} />
+                <Page width={windowWidth <= 425 && "360"} pageNumber={pageNumber} />
             </Document>
             <HStack w="100%" justifyContent="space-between">
                 <Text>
