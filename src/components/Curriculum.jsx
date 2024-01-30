@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { HStack, Link, Text, VStack } from '@chakra-ui/react';
 
-import pdf from "../assets/CV_Steven_Faria_Gusmão.pdf";
+import pdf from "../assets/Steven_Faria_CV.pdf";
 import save from "../assets/Save.svg";
 import arrowLeft from "../assets/arrowLeft.svg";
 import arrowRight from "../assets/arrowRight.svg";
