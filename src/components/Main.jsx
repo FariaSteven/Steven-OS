@@ -36,7 +36,7 @@ const Main = () => {
       h="100vh"
       bg="#BDBDBD"
       cursor={`url(${CursorDefault}), default;`}
-      fontFamily="ChicagoFLFRegular"
+      fontFamily="'Chicago', sans-serif"
       color="#4F4F4F"
     >
       <Header />
