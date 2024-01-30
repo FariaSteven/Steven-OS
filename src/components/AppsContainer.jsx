@@ -101,8 +101,8 @@ const AppsContainer = ({ setOpenedApp }) => {
           <img src={bin} alt="Trash" />
           <Text>Trash</Text>
         </VStack>
-      </VStack>
-    </HStack>
+      </VStack> 
+    </HStack>    
   )
 }
 
